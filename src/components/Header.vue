@@ -17,7 +17,7 @@
       <vs-navbar-item :active="(nav = '2')" class="historia"
         ><span>Historia</span></vs-navbar-item
       >
-      <vs-navbar-item :active="(nav = '3')" class="tech"
+      <vs-navbar-item :active="(nav = '3')" class="techn"
         ><span>Technologie</span></vs-navbar-item
       >
       <vs-navbar-item :active="(nav = '4')" class="projekty"
@@ -36,7 +36,7 @@
 export default {
   name: "Header",
   data: () => ({
-    active: "0",
+    nav: "0",
   }),
 };
 </script>

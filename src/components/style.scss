@@ -1,0 +1,136 @@
+#card {
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45vh;
+    width: 70vh;
+    position: relative;
+
+    $border: 6px;
+    background: #fff;
+
+    border-radius: 25px;
+
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    box-sizing: border-box;
+    mix-blend-mode: color-burn;
+    box-shadow: 3px 3px 17px 10px rgba(5, 173, 215, 0.22);
+    border-radius: 60px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(
+        2deg,
+        rgba(44, 96, 253, 0.6) 0%,
+        rgba(5, 173, 215, 1) 100%
+      );
+    }
+    .content {
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 4px 0;
+      height: 100%;
+      width: 99%;
+      border-radius: 60px;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      margin: 10% 0;
+    }
+  }
+
+  $border-radius: 60px;
+
+.grounded-radiants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 41vh;
+  width: 67vh;
+  
+ margin: 10vh 0;
+  position: relative;
+  border: 4px solid transparent;
+  border-radius: $border-radius;
+  background: #ffffff;
+  background-clip: padding-box;
+  padding: 10px;
+  /* just to show box-shadow still works fine */
+}
+
+.grounded-radiants::after {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: linear-gradient(
+    2deg,
+    rgba(44, 96, 253, 0.6) 0%,
+    rgba(5, 173, 215, 1) 100%
+  );
+  content: "";
+  z-index: -1;
+  border-radius: $border-radius;
+    mix-blend-mode: color-burn;
+  box-shadow: 3px 3px 17px 10px rgba(5, 173, 215, 0.22);
+}
+
+ .content {
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 4px 0;
+      height: 100%;
+      width: 99%;
+      border-radius: 60px;
+      background-color: #ffffff;
+    }
+
+    .info {
+      display: flex;
+      justify-content: center;
+      height: 70vh;
+     
+    .vs-card{
+      border-radius: 40px !important;
+      margin: 10vh 0 0 0;
+      width: 70vw;
+      height: 50vh;
+    }
+    }
+    #info-card, .vs-card, .vs-card-content .vs-card__img{
+      max-width: inherit !important;
+      max-height: inherit !important;;
+    }
+    .vs-card__img{
+      width: 40%;
+    
+      img{
+        height: 100%;
+      }
+    }
