@@ -45,6 +45,12 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+ .circle{
+      height: 2vh;
+      width: 2vh;
+      border-radius: 1000px;
+      background: linear-gradient(0deg, rgba(44,96,253,1) 0%, rgba(5,173,215,1) 100%);
+    }
 
 .border{
       position: relative;

@@ -2,6 +2,8 @@
   <div class="header">
     <vs-navbar class="nav"  v-model="active">
       <template>
+        <div class="circle"></div>
+        <div style="width: 8px;"></div>
         <h2>Adam Tytoń</h2>
       </template>
       <a href="#home"
@@ -20,10 +22,7 @@
       <vs-navbar-item :active="(nav = '3')" class="techn"
         ><span>Technologie</span></vs-navbar-item
       >
-      <vs-navbar-item :active="(nav = '4')" class="projekty"
-        ><span>Projekty</span></vs-navbar-item
-      >
-      <vs-navbar-item :active="(nav = '5')" class="kontakt"
+      <vs-navbar-item :active="(nav = '4')" class="kontakt"
         ><span>Kontakt</span></vs-navbar-item
       >
     </vs-navbar>
@@ -46,7 +45,6 @@ export default {
   .nav {
     position: fixed;
     display: flex;
-    justify-items: center;
     background-color: #ffffff;
     height: 55px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
@@ -57,11 +55,12 @@ export default {
       div {
         span {
           text-align: center;
-          margin: 0 2px;
+          margin: 0 10px;
           font-size: 1.1rem;
         }
       }
     }
+   
   }
 }
 </style>
