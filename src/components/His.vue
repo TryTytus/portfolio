@@ -52,9 +52,10 @@ export default {
 <style lang="scss">
 .his-main {
   .his-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
     align-items: center;
-    height: 60vh;
     background-color: #ffffff;
     .vs-avatar {
       border: #ffffff 1vh solid;
@@ -105,6 +106,14 @@ export default {
         transform: rotate(360deg);
       }
     }
+  }
+
+}
+@media screen and (min-width: 1000px) {
+  .his-main {
+  .his-content {
+    flex-direction: column;
+}
   }
 }
 </style>
