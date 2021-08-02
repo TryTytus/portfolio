@@ -8,7 +8,7 @@
           <div class="circle"></div>
           <h2 class="tit">Bardzo dobrze znane</h2>
         </div>
-        <div class="gridd">
+        <div id="g" class="gridd">
           <tcard title="HTML5" icon="devicon-html5-plain"></tcard>
           <tcard title="CSS3" icon="devicon-css3-plain"></tcard>
           <tcard title="Javascript" icon="devicon-javascript-plain"></tcard>
@@ -25,18 +25,12 @@
           <div class="circle"></div>
           <h2 class="tit">Dobrze znane</h2>
         </div>
-        <div class="gridd">
+        <div id="g" class="gridd">
           <tcard title="Vue.js" icon="devicon-vuejs-plain"> </tcard>
           <tcard title="React.js" icon="devicon-react-original"></tcard>
           <tcard title="Bootstrap" icon="devicon-bootstrap-plain"></tcard>
           <tcard title="Figma" icon="devicon-figma-plain"></tcard>
           <tcard title="Firebase" icon="devicon-firebase-plain"></tcard>
-          <tcard
-            title="Firebase"
-            class="none"
-            style="visible: none"
-            icon="devicon-firebase-plain"
-          ></tcard>
         </div>
       </div>
       <div class="mainn">
@@ -46,7 +40,7 @@
         </div>
       </div>
 
-      <div class="gridd">
+      <div id="g" class="gridd">
         <tcard title="npm" icon="devicon-npm-original-wordmark"></tcard>
         <tcard title="Git" icon="devicon-git-plain"></tcard>
         <tcard title="Postgresql" icon="devicon-postgresql-plain"></tcard>
@@ -56,6 +50,7 @@
         <tcard title="SCSS" icon="devicon-sass-original"></tcard>
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -69,7 +64,7 @@ export default {
 </script>
 <style lang="scss">
 div .techh {
-  height: 170vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +74,7 @@ div .techh {
     font-size: 2.2rem;
   }
   #area {
-    max-width: 80vw;
+
     display: flex !important;
     align-items: center !important;
     justify-items: start !important;
@@ -107,13 +102,13 @@ div .techh {
     border-radius: 25px;
   }
   .gridd {
-    width: min-content;
+    max-width: 80vw;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
   }
   .mainn {
-    width: 67vw;
     display: flex;
+    margin-right: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -129,5 +124,14 @@ div .techh {
     margin-top: 3vh;
   }
 
+
+  @media screen and (max-content: 1350px) {
+
+      .gridd #g{
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    
+  }
 }
 </style>

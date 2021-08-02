@@ -1,5 +1,5 @@
 <template>
-  <div class="his-main">
+  <div id="historia" class="his-main">
     <svg
       style="transform: translateY(5px)"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,9 +11,9 @@
         d="M0,224L40,229.3C80,235,160,245,240,245.3C320,245,400,235,480,202.7C560,171,640,117,720,117.3C800,117,880,171,960,186.7C1040,203,1120,181,1200,144C1280,107,1360,53,1400,26.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
       ></path>
     </svg>
-    <div id="historia" class="his-content">
-      <vs-row align="center">
-        <vs-col offset="1" w="6">
+    <div class="his-content">
+      <div class="his-grid">
+        <div class="his-grid-item1">
           <div>
             <h1>O mnie</h1>
             <div class="line"></div>
@@ -25,13 +25,13 @@
               the shape's attributes such as colors and lines be changed.
             </p>
           </div>
-        </vs-col>
-        <vs-col w="4">
+        </div>
+        <div class="his-grid-item2">
           <vs-avatar size="400" circle>
             <img src="../assets/avatar.jpg" alt="" />
           </vs-avatar>
-        </vs-col>
-      </vs-row>
+        </div>
+      </div>
     </div>
     <svg id="technologie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -57,6 +57,16 @@ export default {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+grid-item:nth-child(1) { grid-area: col1; }
+grid-item:nth-child(2) { grid-area: col2; }
+
+.his-grid{
+  justify-content: center;
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-columns: 40vw 25vw;
+  align-items: center;
+}
     .vs-avatar {
       border: #ffffff 1vh solid;
     }
@@ -109,10 +119,21 @@ export default {
   }
 
 }
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .his-main {
   .his-content {
-    flex-direction: column;
+  .his-grid{
+    justify-items: center;
+    grid-template-columns: 1fr;
+    p{
+      width: 70vw;
+    }
+
+    .his-grid-item1{
+      order: 2;
+    }
+  }
+
 }
   }
 }

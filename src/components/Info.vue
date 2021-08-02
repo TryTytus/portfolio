@@ -73,9 +73,7 @@ letter-spacing: 0.1rem;
 
  }
  @media screen and (max-width: 1200px) {
-   .info-grid{
 
-   }
    .textt{
      p{
        width: 70vw;
